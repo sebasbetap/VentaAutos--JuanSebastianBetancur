@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges } from '@angular/core';
 import { faStar } from '@fortawesome/free-regular-svg-icons';
 
 @Component({
@@ -16,9 +16,9 @@ export class EstrellasComponent implements OnChanges {
 
   constructor() { }
 
-  ngOnChanges(changes: SimpleChanges): void {
+  ngOnChanges(_changes: SimpleChanges): void {
       this.starsList = [];
-      for(var i = 1; i<= this.calificacion; i++) {
+      for(let i = 1; i<= this.calificacion; i++) {
         this.starsList.push(1);
       }
   }
