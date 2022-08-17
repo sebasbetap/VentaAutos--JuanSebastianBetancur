@@ -10,7 +10,6 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { DetalleAutosComponent } from './autos/detalle-autos/detalle-autos.component';
 import { InicioComponent } from './autos/inicio/inicio.component';
 import { RouterModule } from '@angular/router';
-import { DetalleAutoGuard } from './shared/detalle-auto.guard';
 
 @NgModule({
   declarations: [
@@ -27,7 +26,7 @@ import { DetalleAutoGuard } from './shared/detalle-auto.guard';
     FontAwesomeModule,
     RouterModule.forRoot([
       { path: "autos", component: ListaAutosComponent },
-      { path: "autos/:id", component: DetalleAutosComponent, canActivate: [DetalleAutoGuard] },
+      { path: "auto/:id", component: DetalleAutosComponent },
       { path: "inicio", component: InicioComponent },
       { path: "", redirectTo: "inicio", pathMatch: "full" },
       { path: "**", redirectTo: "inicio", pathMatch: "full" },
